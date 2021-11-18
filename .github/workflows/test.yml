@@ -11,8 +11,8 @@ on:
   workflow_dispatch:
 
 jobs:
-  test-hello:
-    name: Test hello
+  # This workflow contains a single job called "build"
+  build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
