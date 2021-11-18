@@ -36,3 +36,4 @@ jobs:
           echo test, and deploy your project.
           sudo apt install sbcl
           mkdir -p ${HOME}/quicklisp/local-projects
+          git -C ${HOME}/quicklisp/local-projects clone https://github.com/edicl/hunchentoot.git
