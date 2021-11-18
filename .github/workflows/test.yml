@@ -1,0 +1,17 @@
+name: Lizp Test
+on:
+  branches: [master]
+  pull_request: [master]
+jobs:
+  test-hello:
+  runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@v2
+    - name: run multi-line script - test-hello
+      run: |
+        sudo apt install sbcl
+        mkdir -p ${HOME}/quicklisp/local-projects
+        git -C ${HOME}/quicklisp/local-projects clone https://github.com/edicl/hunchentoot.git
+        make quicklisp
+        sbcl --load
+        sbcl --noinform --no-userinit --no-sysinit --non-interactive --load hello.lisp
