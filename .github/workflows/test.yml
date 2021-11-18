@@ -15,3 +15,11 @@ jobs:
         make quicklisp
         sbcl --load
         sbcl --noinform --no-userinit --no-sysinit --non-interactive --load src/hello.lisp
+    - name: run multi-line script - test-goodbye
+      run: |
+        sudo apt install sbcl
+        mkdir -p ${HOME}/quicklisp/local-projects
+        git -C ${HOME}/quicklisp/local-projects clone https://github.com/edicl/hunchentoot.git
+        make quicklisp
+        sbcl --load
+        sbcl --noinform --no-userinit --no-sysinit --non-interactive --load src/goodbye.lisp

@@ -1,0 +1,3 @@
+;;;; goodbye.lisp
+
+(error "goodbye")
