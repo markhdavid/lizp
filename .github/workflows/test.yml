@@ -14,4 +14,4 @@ jobs:
         git -C ${HOME}/quicklisp/local-projects clone https://github.com/edicl/hunchentoot.git
         make quicklisp
         sbcl --load
-        sbcl --noinform --no-userinit --no-sysinit --non-interactive --load hello.lisp
+        sbcl --noinform --no-userinit --no-sysinit --non-interactive --load src/hello.lisp
